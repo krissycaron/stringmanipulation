@@ -2,9 +2,8 @@ var input = document.getElementById("userInput");
 
 
 function reversal() {
-	return input.split('').reverse().join('');
-	input.value.innerHTML;
-	// console.log(input.value);
+	input.value.split('').reverse().join('');
+	console.log(input.val);
 }
 
 function alphabits() {
