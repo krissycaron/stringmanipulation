@@ -3,12 +3,12 @@ var input = document.getElementById("userInput");
 
 function reversal() {
 	input.value.split('').reverse().join('');
-	console.log(input.value	);
+	//console.log(input.value);
 }
 
 function alphabits() {
 	input.value.split('').sort().join('');
-	console.log(input.value);	
+	console.log("input", input.value);	
 	// getElementByID.input.sort();
 }
 
@@ -23,7 +23,7 @@ function palindrome(string) {
 }
 
 var testString = "";
-reversal(testString);
+//reversal(testString);
 alphabits(testString);
 // palindrome(testString);
 
