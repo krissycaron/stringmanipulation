@@ -1,37 +1,34 @@
 var input = document.getElementById("userInput");
-
+var output1 = document.getElementById("output");
+var rev = "";
 
 function reversal() {
-	input.value.split('').reverse().join('');
-	//console.log(input.value);
+	rev = input.value.split('').reverse().join('');
+	console.log(rev);
 }
 
 function alphabits() {
-	input.value.split('').sort().join('');
-	console.log("input", input.value);	
+	var alpha = input.value.split('').sort().join('');
+	console.log(alpha);	
 	// getElementByID.input.sort();
 }
 
-function palindrome(string) {
-    var len = string.length;
-    for ( var i = 0; i < Math.floor(len/2); i++ ) {
-        if (string[i] !== string[len - 1 - i]) {
-            return false;
-        }
-    }
-    return true;
+function palindrome() {
+	if (rev === input.value) {
+		output1.innerHTML = "Your string is a palidrome";
+	} 
 }
 
-var testString = "";
-//reversal(testString);
-alphabits(testString);
-// palindrome(testString);
-
-
-submit.addEventListener("click", reversal);
+submit.addEventListener("click", function(){
+	reversal();
+	alphabits();
+	palindrome();
+});
 input.addEventListener("keypress", function(e){
 	// console.log(e);
 	if (e.charCode === 13) {
 		reversal();
+		alphabits();
+		palindrome();
 	}
 });
